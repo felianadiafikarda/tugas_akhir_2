@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman Cetak dengan Validasi</title>
+    <style>
+        /* Gaya tampilan untuk halaman cetak */
+        @media print {
+            /* Semua elemen kecuali tombol cetak disembunyikan pada halaman cetak */
+            body * {
+                display: none;
+            }
+
+            /* Hanya elemen dengan kelas "print-content" yang ditampilkan pada halaman cetak */
+            .print-content {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        // Fungsi untuk melakukan validasi input sebelum mencetak
+        function validasiCetak() {
+            var inputElem = document.getElementById("inputData");
+            var inputData = inputElem.value.trim();
+
+            // Lakukan validasi input di sini
+            if (inputData === "") {
+                alert("Input tidak boleh kosong!");
+                return;
+            }
+
+            // Jika validasi sukses, tampilkan halaman cetak
+            var printContentElem = document.getElementById("printContent");
+            printContentElem.innerHTML = "<h1>Judul Halaman Cetak</h1><p>Ini adalah konten yang akan dicetak.</p><p>Input: " + inputData + "</p>";
+
+            // Cetak halaman
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <!-- Form input untuk validasi -->
+    <input type="text" id="inputData" placeholder="Masukkan input" required>
+    <button onclick="validasiCetak()">Cetak Halaman</button>
+
+    <!-- Elemen-elemen pada halaman cetak -->
+    <div id="printContent" class="print-content"></div>
+</body>
+</html>

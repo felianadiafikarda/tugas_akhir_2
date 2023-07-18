@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Konser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <h1>Print E-TIket</h1>
+            <hr>
+            <form id="registrationForm" action="cek.php" method="POST">
+                <label for="email">No Tiket :</label>
+                <input type="text" id="email" name="notiket" placeholder="Masukkan email anda.." required>
+
+                <label for="name">Email :</label>
+                <input type="text" id="name" name="email" placeholder="Masukkan nama anda.." required>
+
+                <div class="daftar">
+                    <button
+                        style="background-color: #bc8f8f; border-color: #bc8f8f; width: 252px; color: beige;font-size: 16px;cursor: pointer;margin-top: 0px;margin-left: 0px;border-radius: 5px;"
+                        onclick="returnToOutput()">Cetak</button>
+                </div>
+            </form>
+            <form id="registrationForm" action="index.html">
+                <div class="batal">
+                    <button onclick="returnToIndex()"
+                        style="background-color: #bc8f8f; border-color: #bc8f8f; width: 252px; color: beige;font-size: 16px;cursor: pointer;margin-top: 0px;margin-left: 0px;border-radius: 5px;">Kembali</button>
+                </div>
+            </form>
+
+            <div class="result" id="result"></div>
+        </div>
+        <div class="right">
+            <img src="tiket.png" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>

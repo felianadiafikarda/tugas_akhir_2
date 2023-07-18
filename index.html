@@ -1,0 +1,72 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Konser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <h1>Registrasi E-TIket</h1>
+            <hr>
+            <form id="registrationForm" action="proses.php" method="POST">
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" placeholder="Masukkan email anda.." required>
+
+                <label for="name">Nama :</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama anda.." required>
+
+                <label for="noTelp">No.Telp :</label>
+                <input type="text" id="noTelp" name="noTelp" placeholder="Masukkan no.Telp anda.." required>
+
+                <label for="alamat">Alamat :</label>
+                <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat anda.." required>
+
+                <label for="noIdentitas">No.Identitas (KTP/SIM) :</label>
+                <input type="text" id="noIdentitas" name="noIdentitas" placeholder="Masukkan no.Identitas anda.." required>
+
+                <div class="daftar">
+                    <button
+                        style="background-color: #bc8f8f; border-color: #bc8f8f; width: 252px; color: beige;font-size: 16px;cursor: pointer;margin-top: 0px;margin-left: 0px;border-radius: 5px;"
+                        onclick="submitForm()">Pesan Tiket</button>
+                </div>
+            </form>
+            <form id="registrationForm" action="output2.html">
+                <div class="daftar">
+                    <button
+                        style="background-color: #bc8f8f; border-color: #bc8f8f; width: 252px; color: beige;font-size: 16px;cursor: pointer;margin-top: 0px;margin-left: 0px;border-radius: 5px;"
+                        onclick="returnToOutput()">Cetak Tiket</button>
+                </div>
+</form>
+
+                <div class="batal">
+                    <input type="reset" value="Reset"
+                        style="background-color: #bc8f8f; border-color: #bc8f8f; width: 252px; color: beige;font-size: 16px;cursor: pointer;margin-top: 0px;margin-left: 0px;border-radius: 5px;">
+                </div>
+
+                <!-- <div class="batal">
+                    <button onclick="saveAsJSON()"
+                        style="background-color: #bc8f8f; border-color: #bc8f8f; width: 252px; color: beige;font-size: 16px;cursor: pointer;margin-top: 0px;margin-left: 0px;border-radius: 5px;">Simpan
+                        Sebagai
+                        Json</button>
+                </div> -->
+                <!-- <div class="batal">
+                    <button onclick="returnToOutput()"
+                        style="background-color: #bc8f8f; border-color: #bc8f8f; width: 252px; color: beige;font-size: 16px;cursor: pointer;margin-top: 0px;margin-left: 0px;border-radius: 5px;">Cetak
+                        Tiket</button>
+                </div> -->
+           
+            <div class="result" id="result"></div>
+        </div>
+        <div class="right">
+            <img src="tiket.png" alt="">
+        </div>
+    </div>
+  
+</body>
+
+</html>

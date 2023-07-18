@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #bc8f8f;
+}
+.container{
+    width: 950px;
+    height: 650px;
+    display: flex;
+    max-width: 1500px;
+    background: #d3d3d3;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(169, 169, 169, 1);
+}
+.login{
+    width: 390px;
+}
+.form{
+    width: 250px;
+    margin: 60px auto;
+    margin-left: 20px;
+}
+h1{
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+hr{
+    border-top: 2px solid #bc8f8f;
+    border-left: 50px;
+}
+.floating-input {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.right img{
+    width: 500px;
+    height: 500px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 60px;
+}
+form label{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+input{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 15px;
+}
+button{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 15px;
+}
+.daftar{
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 280px;
+    color: beige;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 80px;
+    border-radius: 5px;
+}
+.batal{
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 280px;
+    color: beige;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 80px;
+    border-radius: 5px;
+}
+.daftar:hover {
+    width: 267px;
+    height: 60px;
+    margin-left: 80px;
+    border-radius: 5px;
+    background: rgba(119, 136, 153, 1);
+}
+
+.batal:hover {
+    width: 267px;
+    height: 60px;
+    margin-left: 80px;
+    border-radius: 5px;
+    background: rgba(119, 136, 153, 1);
+}
+/* Gaya tampilan untuk halaman cetak */
+@media print {
+    /* Semua elemen kecuali tombol cetak disembunyikan pada halaman cetak */
+    body * {
+        display: none;
+    }
+
+    /* Hanya elemen dengan kelas "print-content" yang ditampilkan pada halaman cetak */
+    .print-content {
+        display: block;
+    }
+}
+@media (max-width: 880px){
+    .container{
+        width: 300%;
+        height: 150%;
+        max-width: 750%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    form{
+        width: 300px;
+        margin: 20px auto;
+    }
+    .login{
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        padding: 20px;
+    }
+    .daftar{
+        margin-left: auto;
+        width: 90%;
+    }
+    .batal{
+        margin-left: auto;
+        width: 90%;
+    }
+    .right img{
+        margin-left: auto;
+        width: 90%;
+        height: 90%;
+    }
+    .daftar:hover{
+        width: 89%;
+        height: 2%;
+        margin-top: 5px;
+        margin-left: 27px;
+        border-radius: 5px;
+    }
+    .batal:hover{
+        width: 89%;
+        height: 2%;
+        margin-top: 5px;
+        margin-left: 27px;
+        border-radius: 5px;
+    }
+}
